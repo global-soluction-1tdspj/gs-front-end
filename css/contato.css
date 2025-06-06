@@ -78,3 +78,44 @@ main {
     gap: 32px;
     justify-content: center;
 }
+
+#mensagem-contato {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    min-height: 24px;
+}
+
+.erro-campo {
+    color: #ff2b2b;
+    background: #fff0f0;
+    border: 1px solid #ff2b2b;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+    min-height: 18px;
+    font-size: 1rem;
+}
+
+.erro-campo:empty {
+    display: none;
+}
+
+.popup-mensagem {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #22cc66;
+    color: #fff;
+    padding: 32px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    font-size: 1.4rem;
+    z-index: 9999;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
