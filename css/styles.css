@@ -20,12 +20,11 @@ body {
 .rodape {
     background: #fff;
     border-radius: 10px;
-    margin: 16px auto;
+    margin: 10px auto;
     padding: 20px 36px;
     display: flex;
     align-items: center;
     text-align: center;
-    width: 100%;
     max-width: 1200px;
     justify-content: center;
     gap: 40px;

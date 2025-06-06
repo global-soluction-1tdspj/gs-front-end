@@ -1,0 +1,50 @@
+.redes-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #39ff90;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 48px;
+    padding: 40px 0;
+    margin: 20px;
+}
+
+.rede {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    background: #d6d6d6;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.botao-rede {
+    display: inline-block;
+    background: #fff;
+    color: #00ff99;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 16px;
+    padding: 8px 24px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    text-align: center;
+}
+
+.botao-rede:hover {
+    background: #00ff99;
+    color: #fff;
+}

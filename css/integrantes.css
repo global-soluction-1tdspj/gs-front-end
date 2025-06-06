@@ -38,6 +38,15 @@ main {
     margin-bottom: 24px;
 }
 
+.integrante-foto img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
 .integrante-info {
     display: flex;
     flex-direction: column;
@@ -48,4 +57,39 @@ main {
 .integrante-info span {
     font-size: 1rem;
     color: #111;
+}
+
+.integrante-links {
+    margin-top: 8px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    transition: background 0.2s;
+    text-decoration: none;
+    border: 1px solid #e0e0e0;
+}
+
+.icon-link:hover {
+    background: #e6fff2;
+}
+
+.icon-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px;
+    margin-top: 8px;
 }
