@@ -5,13 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeVerde</title>
-    <link rel="icon" href="./img/Logo.png" type="image/x-icon">
+    <link rel="icon" href="../img/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/solucao.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
     <script src="../js/solucao.js"></script>
+    <script src="../js/sidebar.js"></script>
 </head>
 
 <body>
+    <button id="menu-btn" class="menu-btn">&#9776;</button>
+
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-content">
+            <img src="../img/Logo.png" alt="Logo CODEVERDE" class="sidebar-logo">
+            <nav>
+                <a href="../index.html" class="sidebar-link">Home</a>
+                <a href="faq.html" class="sidebar-link">FAQ</a>
+                <a href="integrantes.html" class="sidebar-link">Integrantes</a>
+                <a href="contato.html" class="sidebar-link">Contato</a>
+                <a href="redes-sociais.html" class="sidebar-link">Redes sociais</a>
+            </nav>
+            <button id="close-btn" class="close-btn">X</button>
+        </div>
+    </aside>
+
     <header class="cabecalho">
         <div class="logo-area">
             <img src="../img/Logo.png" alt="Logo CODEVERDE">
@@ -26,6 +44,7 @@
     </header>
 
     <main>
+        <h1 class="solucao-titulo">Sistema de Monitoramento</h1>
         <div class="container-solucao">
             <div class="estados">
                 <div class="estados-header">
