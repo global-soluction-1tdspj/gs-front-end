@@ -1,0 +1,138 @@
+
+
+.container-solucao {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px 0;
+}
+
+.estados, .cidades {
+  background: #18005a;
+  border-radius: 4px;
+  color: #fff;
+  min-width: 320px;
+  max-width: 350px;
+  border: 3px solid #3b7cff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.estados {
+  padding: 0;
+  align-items: stretch;
+}
+
+.estados-header {
+  background: #3b07ff;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 2px 2px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.estados-list {
+  list-style: disc inside;
+  margin: 0;
+  padding: 10px 0 10px 20px;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.estados-list li {
+  margin-bottom: 7px;
+  font-size: 1em;
+  position: relative;
+  padding-left: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.estados-list li.selected {
+  color: #fff;
+  background: #2b1fff;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.estados-list li.selected::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #3b7cff;
+  border-radius: 50%;
+  margin-right: 6px;
+  position: absolute;
+  left: -12px;
+  top: 7px;
+}
+
+.cidades-header {
+  background: #3b07ff;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 4px 4px 0 0;
+  text-align: left;
+}
+
+.cidades-list {
+  margin: 0;
+  padding: 10px 0 10px 10px;
+  font-size: 1em;
+}
+
+.cidade {
+  margin-bottom: 7px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.cidade.perigo {
+  background: #1a1aff;
+  color: #fff;
+}
+
+.cidade.notificada {
+  background: #00ff6a;
+  color: #000;
+}
+
+.alerta-btn {
+  background: #ff0000;
+  color: #fff;
+  font-size: 1.3em;
+  border: none;
+  border-radius: 15px;
+  padding: 15px 40px;
+  cursor: pointer;
+  margin: 30px auto 0 auto;
+  display: block;
+  font-weight: bold;
+  box-shadow: 1px 2px 8px #8884;
+  transition: background 0.2s;
+}
+
+.alerta-btn:hover {
+  background: #cc0000;
+}
+
+@media (max-width: 900px) {
+  .container-solucao {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .alerta-btn {
+    margin-left: 0;
+    width: 100%;
+  }
+}
