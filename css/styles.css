@@ -6,15 +6,15 @@ body {
 
 .cabecalho {
     background: #fff;
-    border-radius: 10px;
+    border-radius: 18px;
     margin: 16px auto;
     padding: 20px 36px;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     max-width: 1200px;
     justify-content: flex-start;
     gap: 40px;
+    will-change: transform;
 }
 
 .rodape {
@@ -77,25 +77,43 @@ body {
 }
 
 .info-block {
-    background: #90ff90;
+   display: block;
+    background: #39ff90;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
     border-radius: 8px;
     margin: 16px auto;
     padding: 20px 36px;
     max-width: 1200px;
     justify-content: flex-start;
-    color: #222;
-    font-size: 1.1rem;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.info-block h1,
+.info-block h2,
+.info-block h3 {
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.info-block p,
+.info-block ul,
+.info-block li {
+    text-align: center;
+    margin-bottom: 12px;
+    line-height: 1.6;
 }
 
 .info-block ul {
-    margin: 0 0 0 18px;
-    padding: 0;
-}
-
-.info-block li {
-    margin-bottom: 6px;
-    line-height: 1.5;
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto 12px auto;
+    padding-left: 20px;
 }
 
 .info-title {
@@ -134,3 +152,317 @@ body {
 .icon-green { color: #22cc66; }
 .icon-blue { color: #1a00ff; }
 .icon-pink { color: #e600a8; }
+
+.cabecalho, .rodape {
+    transition: opacity 0.3s, max-height 0.3s;
+    overflow: hidden;
+    opacity: 1;
+    max-height: 500px;
+}
+
+.cabecalho.hide, .rodape.hide {
+    opacity: 0;
+    max-height: 0;
+    pointer-events: none;
+    animation: none;
+}
+
+.nav-link, .rodape nav a {
+    position: relative;
+    z-index: 1;
+    transition: color 0.2s;
+}
+
+.nav-link::before, .rodape nav a::before {
+    content: '';
+    position: absolute;
+    inset: -6px -12px;
+    border-radius: 14px;
+    box-shadow: 0 0 0 0 #39ff90, 0 0 0 rgba(57,255,144,0.00);
+    background: transparent;
+    transition: box-shadow 0.3s, transform 0.3s;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-link:hover::before, .rodape nav a:hover::before {
+    animation: btnSpinBox 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+    box-shadow: 0 0 0 3px #39ff90, 0 4px 24px rgba(57,255,144,0.12);
+    opacity: 1;
+}
+
+@keyframes btnSpinBox {
+    0% {
+        transform: rotate(-8deg) scale(0.95);
+        box-shadow: 0 0 0 0 #39ff90, 0 0 0 rgba(57,255,144,0.00);
+        opacity: 0;
+    }
+    60% {
+        transform: rotate(8deg) scale(1.05);
+        box-shadow: 0 0 0 3px #39ff90, 0 4px 24px rgba(57,255,144,0.12);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+        box-shadow: 0 0 0 3px #39ff90, 0 4px 24px rgba(57,255,144,0.12);
+        opacity: 1;
+    }
+}
+
+.contato-container,
+.integrantes-container,
+.redes-container,
+.faq-container,
+.info-block {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px auto;
+    padding: 20px 36px;
+    padding: 0;
+}
+
+@media (max-width: 900px) {
+    .integrante-card,
+    .rede-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 14px 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .integrante-card,
+    .rede-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px 10px;
+    }
+    .contato-container,
+    .integrantes-container,
+    .redes-container,
+    .faq-container,
+    .info-block {
+        padding: 10px 2vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .integrante-card,
+    .rede-card {
+        padding: 8px 4px;
+        font-size: 1rem;
+    }
+    .contato-container,
+    .integrantes-container,
+    .redes-container,
+    .faq-container,
+    .info-block {
+        padding: 4px 1vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    .cabecalho,
+    .rodape,
+    .info-block {
+        max-width: 95vw;
+        padding: 16px 10vw;
+    }
+    .cabecalho nav,
+    .rodape nav {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 900px) {
+    .cabecalho,
+    .rodape {
+        flex-direction: column;
+        gap: 20px;
+        padding: 16px 5vw;
+        max-width: 98vw;
+    }
+    .cabecalho nav,
+    .rodape nav {
+        flex-direction: column;
+        gap: 24px;
+        margin-left: 0;
+    }
+    .logo-area {
+        justify-content: center;
+        gap: 12px;
+    }
+    .info-block {
+        padding: 16px 4vw;
+    }
+    .faq-container {
+        padding: 0 2vw;
+    }
+
+    .contato-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 32px 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contato-wrapper {
+        background: #222;
+        border-radius: 16px;
+        padding: 32px 40px;
+        max-width: 500px;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .info-texto {
+        color: #fff;
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+        display: block;
+    }
+
+    .contato-form label {
+        color: #fff;
+        margin-top: 12px;
+        margin-bottom: 4px;
+        display: block;
+        font-size: 1rem;
+    }
+
+    .contato-form input,
+    .contato-form textarea {
+        width: 100%;
+        padding: 8px 10px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        font-size: 1rem;
+        background: #39ff90;
+        color: #fff;
+        box-sizing: border-box;
+    }
+
+    .contato-form button {
+        background: #39ff90;
+        color: #222;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 0;
+        font-size: 1.1rem;
+        margin-top: 10px;
+        cursor: pointer;
+        width: 100%;
+        transition: background 0.2s;
+    }
+
+    .contato-form button:hover {
+        background: #22cc66;
+    }
+
+    .erro-campo {
+        color: #ff2b2b;
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cabecalho,
+    .rodape,
+    .info-block {
+        padding: 10px 2vw;
+        gap: 10px;
+    }
+    .logo-area img {
+        width: 40px;
+        height: 40px;
+    }
+    .logo-text {
+        font-size: 1.1rem;
+    }
+    .nav-link, .rodape nav a {
+        font-size: 1.1rem;
+        padding: 6px 10px;
+    }
+    .faq-titulo {
+        font-size: 1.2rem;
+        padding: 0 2vw;
+    }
+    .faq-pergunta {
+        font-size: 1rem;
+    }
+    .faq-resposta {
+        font-size: 0.95rem;
+    }
+    .btn-acessar {
+        font-size: 1rem;
+        padding: 12px 10px;
+    }
+    .contato-container {
+        padding: 10px 0;
+    }
+    .contato-wrapper {
+        padding: 12px 2vw;
+        border-radius: 10px;
+        gap: 16px;
+    }
+    .info-texto {
+        font-size: 1rem;
+    }
+    .contato-form label {
+        font-size: 0.98rem;
+    }
+    .contato-form input,
+    .contato-form textarea {
+        font-size: 0.98rem;
+        padding: 7px 8px;
+    }
+    .contato-form button {
+        font-size: 1rem;
+        padding: 9px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .cabecalho,
+    .rodape,
+    .info-block {
+        padding: 6px 1vw;
+    }
+    .logo-area img {
+        width: 28px;
+        height: 28px;
+    }
+    .logo-text {
+        font-size: 0.9rem;
+    }
+    .contato-container,
+    .integrantes-container,
+    .redes-container {
+        padding: 4px 1vw;
+    }
+    .integrante-card,
+    .rede-card {
+        font-size: 0.9rem;
+        padding: 6px 2px;
+    }
+}
+
+@media (max-width: 900px) {
+    .redes-sociais,
+    .redes-container li {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 18px !important;
+    }
+}

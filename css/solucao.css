@@ -1,4 +1,10 @@
-
+.solucao-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #3b7cff;
+    margin: 40px 0;
+}
 
 .container-solucao {
   display: flex;
