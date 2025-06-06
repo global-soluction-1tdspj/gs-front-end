@@ -1,9 +1,7 @@
 body {
-    background: linear-gradient(135deg, #1a1a1a, #333);
+    background: linear-gradient(1000deg, #1a1a1a, #202020);
     color: #fff;
     font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 .cabecalho {
@@ -72,3 +70,63 @@ body {
 .nav-link:hover {
     color: #22cc66;
 }
+
+.info-block {
+    background: #90ff90;
+    border-radius: 8px;
+    margin: 16px auto;
+    padding: 20px 36px;
+    max-width: 1200px;
+    justify-content: flex-start;
+    color: #222;
+    font-size: 1.1rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.info-block ul {
+    margin: 0 0 0 18px;
+    padding: 0;
+}
+
+.info-block li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.info-title {
+    display: block;
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+    color: #1a1a1a;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.btn-acessar {
+    display: block;
+    width: 100%;
+    background: #1a00ff;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    margin: 16px auto;
+    padding: 20px 36px;
+    max-width: 1200px;
+    justify-content: flex-start;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn-acessar:hover {
+    background: #0d0080;
+}
+
+.icon-red { color: #ff2b2b; }
+.icon-yellow { color: #ffb800; }
+.icon-green { color: #22cc66; }
+.icon-blue { color: #1a00ff; }
+.icon-pink { color: #e600a8; }
