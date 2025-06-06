@@ -24,7 +24,8 @@ body {
     padding: 20px 36px;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    text-align: center;
+    width: 100%;
     max-width: 1200px;
     justify-content: center;
     gap: 40px;
@@ -50,7 +51,12 @@ body {
     letter-spacing: 1px;
 }
 
-.rodape nav,
+.rodape nav  {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+}
+
 .cabecalho nav {
     display: flex;
     align-items: center;

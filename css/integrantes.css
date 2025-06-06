@@ -1,0 +1,51 @@
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.integrantes-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #39ff90;
+    margin: 40px 0;
+}
+
+.integrantes-lista {
+    display: flex;
+    gap: 24px;
+    margin: auto auto 25px auto
+}
+
+.integrante-card {
+    background: #ddd;
+    border: 2px solid #39ff90;
+    border-radius: 12px;
+    width: 220px;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.integrante-foto {
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50%;
+    margin-bottom: 24px;
+}
+
+.integrante-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.integrante-info span {
+    font-size: 1rem;
+    color: #111;
+}
