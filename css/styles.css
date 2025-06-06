@@ -19,6 +19,19 @@ body {
     gap: 40px;
 }
 
+.rodape {
+    background: #fff;
+    border-radius: 10px;
+    margin: 16px auto;
+    padding: 20px 36px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    max-width: 1200px;
+    justify-content: center;
+    gap: 40px;
+}
+
 .logo-area {
     display: flex;
     align-items: center;
@@ -38,6 +51,8 @@ body {
     font-weight: 600;
     letter-spacing: 1px;
 }
+
+.rodape nav,
 .cabecalho nav {
     display: flex;
     align-items: center;
