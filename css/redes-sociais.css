@@ -21,6 +21,10 @@
     gap: 16px;
 }
 
+.rede img {
+    border: 2px solid #fff;
+}
+
 .avatar {
     width: 200px;
     height: 200px;
