@@ -55,9 +55,9 @@ paginas/
 
 ## Integrantes
 
-- Mathaus Victor Souza – RM: 553963 – 1TDSPF
-- Carlos Alberto Guedes – RM: 553968 – 1TDSPF
-- Vinícius L. E. M. Garcia – RM: 553964 – 1TDSPF
+- Mathaus Victor Souza – RM: 564146 – 1TDSPJ
+- Carlos Alberto Guedes – RM: 566022 – 1TDSPJ
+- Vinícius L. E. M. Garcia – RM: 563340 – 1TDSPJ
 
 ## Endereço do Repositório no GitHub
 
